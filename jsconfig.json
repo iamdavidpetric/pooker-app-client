@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "Api": ["src/process/api"],
+      "Api/*": ["src/process/api/*"],
+      "Constants": ["src/process/constants"],
+      "Constants/*": ["src/process/constants/*"],
+      "Helpers": ["src/process/helpers"],
+      "Helpers/*": ["src/process/helpers/*"],
+      "Hooks": ["src/process/hooks"],
+      "Hooks/*": ["src/process/hooks/*"],
+      "Locales": ["src/process/locales"],
+      "Locales/*": ["src/process/locales/*"],
+      "Paths": ["src/process/paths"],
+      "Paths/*": ["src/process/paths/*"],
+      "Reducers": ["src/process/reducers"],
+      "Reducers/*": ["src/process/reducers/*"],
+      "Redux": ["src/process/redux"],
+      "Redux/*": ["src/process/redux/*"],
+      "Repositories": ["src/process/repositories"],
+      "Repositories/*": ["src/process/repositories/*"],
+      "Routes": ["src/process/routes"],
+      "Routes/*": ["src/process/routes/*"],
+      "Sagas": ["src/process/sagas"],
+      "Sagas/*": ["src/process/sagas/*"]
+    }
+  }
+}
