@@ -1,5 +1,10 @@
 import React from 'react';
 
-const Application = () => <div className='bg-primary text-white'>Pooker </div>;
+import Navigator from '../navigator';
 
+const Application = () => (
+  <>
+    <Navigator />
+  </>
+);
 export default Application;
