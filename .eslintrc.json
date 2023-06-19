@@ -16,7 +16,9 @@
     "semi": ["error", "always"],
     "no-unused-vars": ["warn"],
     "react/no-unused-prop-types": ["warn"],
+    "react/prop-types": ["warn"],
     "no-console": ["warn"],
-    "max-len": ["warn", { "code": 120 }]
+    "max-len": ["warn", { "code": 120 }],
+    "react/react-in-jsx-scope": "off"
   }
 }
