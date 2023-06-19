@@ -1,5 +1,8 @@
-import React from 'react';
+import Navigator from '../navigator';
 
-const Application = () => <div className='bg-primary text-white'>Pooker </div>;
-
+const Application = () => (
+  <>
+    <Navigator />
+  </>
+);
 export default Application;
