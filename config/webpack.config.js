@@ -126,34 +126,34 @@ module.exports = function (webpackEnv) {
             config: false,
             plugins: !useTailwind
               ? [
-                'postcss-flexbugs-fixes',
-                [
-                  'postcss-preset-env',
-                  {
-                    autoprefixer: {
-                      flexbox: 'no-2009',
+                  'postcss-flexbugs-fixes',
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
                     },
-                    stage: 3,
-                  },
-                ],
-                // Adds PostCSS Normalize as the reset css with default options,
-                // so that it honors browserslist config in package.json
-                // which in turn let's users customize the target behavior as per their needs.
-                'postcss-normalize',
-              ]
+                  ],
+                  // Adds PostCSS Normalize as the reset css with default options,
+                  // so that it honors browserslist config in package.json
+                  // which in turn let's users customize the target behavior as per their needs.
+                  'postcss-normalize',
+                ]
               : [
-                'tailwindcss',
-                'postcss-flexbugs-fixes',
-                [
-                  'postcss-preset-env',
-                  {
-                    autoprefixer: {
-                      flexbox: 'no-2009',
+                  'tailwindcss',
+                  'postcss-flexbugs-fixes',
+                  [
+                    'postcss-preset-env',
+                    {
+                      autoprefixer: {
+                        flexbox: 'no-2009',
+                      },
+                      stage: 3,
                     },
-                    stage: 3,
-                  },
+                  ],
                 ],
-              ],
           },
           sourceMap: isEnvProduction ? shouldUseSourceMap : isEnvDevelopment,
         },
@@ -305,6 +305,7 @@ module.exports = function (webpackEnv) {
         }),
         ...(modules.webpackAliases || {}),
         Api: path.resolve(paths.appPath, paths.appSrc + '/process/api'),
+        Components: path.resolve(paths.appPath, paths.appSrc + '/view/components'),
         Constants: path.resolve(paths.appPath, paths.appSrc + '/process/constants'),
         Helpers: path.resolve(paths.appPath, paths.appSrc + '/process/helpers'),
         Hooks: path.resolve(paths.appPath, paths.appSrc + '/process/hooks'),
@@ -313,6 +314,7 @@ module.exports = function (webpackEnv) {
         Reducers: path.resolve(paths.appPath, paths.appSrc + '/process/reducers'),
         Redux: path.resolve(paths.appPath, paths.appSrc + '/process/redux'),
         Repositories: path.resolve(paths.appPath, paths.appSrc + '/process/repositories'),
+        Resources: path.resolve(paths.appPath, paths.appSrc + '/view/resources'),
         Routes: path.resolve(paths.appPath, paths.appSrc + '/process/routes'),
         Sagas: path.resolve(paths.appPath, paths.appSrc + '/process/sagas'),
       },
@@ -556,19 +558,19 @@ module.exports = function (webpackEnv) {
           },
           isEnvProduction
             ? {
-              minify: {
-                removeComments: true,
-                collapseWhitespace: true,
-                removeRedundantAttributes: true,
-                useShortDoctype: true,
-                removeEmptyAttributes: true,
-                removeStyleLinkTypeAttributes: true,
-                keepClosingSlash: true,
-                minifyJS: true,
-                minifyCSS: true,
-                minifyURLs: true,
-              },
-            }
+                minify: {
+                  removeComments: true,
+                  collapseWhitespace: true,
+                  removeRedundantAttributes: true,
+                  useShortDoctype: true,
+                  removeEmptyAttributes: true,
+                  removeStyleLinkTypeAttributes: true,
+                  keepClosingSlash: true,
+                  minifyJS: true,
+                  minifyCSS: true,
+                  minifyURLs: true,
+                },
+              }
             : undefined,
         ),
       ),

@@ -4,6 +4,8 @@
     "paths": {
       "Api": ["src/process/api"],
       "Api/*": ["src/process/api/*"],
+      "Components": ["src/view/components"],
+      "Components/*": ["src/view/components/*"],
       "Constants": ["src/process/constants"],
       "Constants/*": ["src/process/constants/*"],
       "Helpers": ["src/process/helpers"],
@@ -20,6 +22,8 @@
       "Redux/*": ["src/process/redux/*"],
       "Repositories": ["src/process/repositories"],
       "Repositories/*": ["src/process/repositories/*"],
+      "Resources": ["src/view/resources"],
+      "Resources/*": ["src/view/resources/*"],
       "Routes": ["src/process/routes"],
       "Routes/*": ["src/process/routes/*"],
       "Sagas": ["src/process/sagas"],

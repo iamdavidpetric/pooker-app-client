@@ -3,6 +3,13 @@
 module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   theme: {
+    extend: {
+      spacing: {
+        112: '28rem',
+        128: '32rem',
+        144: '36rem',
+      },
+    },
     colors: {
       white: {
         DEFAULT: '#ffffff',
@@ -10,11 +17,14 @@ module.exports = {
       black: {
         DEFAULT: '#000000',
       },
+      gray: {
+        DEFAULT: '#E9E9E9',
+      },
       primary: {
-        DEFAULT: '#2D2D2D',
+        DEFAULT: '#FCF9FF',
       },
       secondary: {
-        DEFAULT: '#181818',
+        DEFAULT: '#a78bfa',
       },
       success: {
         DEFAULT: '#008243',
