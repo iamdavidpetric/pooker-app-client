@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import { Navigate, Route, Routes } from 'react-router-dom';
 
 import Paths from 'src/process/paths';
 import { neutralRoutes, privateRoutes, publicRoutes } from 'src/process/routes';
@@ -18,13 +18,11 @@ const renderRoute = (isLoggedIn, type, route) => {
 };
 
 const Navigator = ({ isLoggedIn = false }) => (
-  <BrowserRouter>
-    <Routes>
-      {publicRoutes.map(renderRoute.bind(null, isLoggedIn, 'public'))}
-      {privateRoutes.map(renderRoute.bind(null, isLoggedIn, 'private'))}
-      {neutralRoutes.map(renderRoute.bind(null, isLoggedIn, 'neutral'))}
-    </Routes>
-  </BrowserRouter>
+  <Routes>
+    {publicRoutes.map(renderRoute.bind(null, isLoggedIn, 'public'))}
+    {privateRoutes.map(renderRoute.bind(null, isLoggedIn, 'private'))}
+    {neutralRoutes.map(renderRoute.bind(null, isLoggedIn, 'neutral'))}
+  </Routes>
 );
 
 Navigator.propTypes = {
